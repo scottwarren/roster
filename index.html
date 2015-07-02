@@ -28,10 +28,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
     <script type="text/javascript">
       (function($, _) {
-        var people = ['Scott', 'Zak', 'Nathan', 'Simon', 'Malcolm', 'Ben', 'Dane'];
-        var peopleLookup = ['Scott', 'Zak', 'Nathan', 'Simon', 'Malcolm', 'Ben', 'Dane', 'Scott', 'Zak'];
+        var people = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben'];
+        var peopleLookup = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben', 'Malcolm', 'Nathan'];
 
-        // use the 5th because it's a Monday, therefore the week loops over on a Monday
         var now = moment();
 
         var weekNumber = now.get('week');
