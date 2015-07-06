@@ -1,0 +1,8 @@
+.roster {
+  width: 100%;
+}
+.roster td,
+.roster th {
+  width: 33%;
+  text-align: center;
+}

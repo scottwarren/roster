@@ -1,16 +1,7 @@
 <html ng-app="rosterApp">
   <head>
     <title>Roster!</title>
-    <style>
-      .roster {
-        width: 100%;
-      }
-      .roster td,
-      .roster th {
-        width: 33%;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/theme.css">
   </head>
   <body ng-controller="RosterCtrl">
     <table border="0" cellpadding="0" cellspacing="0" class="roster">
@@ -21,41 +12,8 @@
         <td ng-repeat="column in columns">{{ column.value }}</td>
       </tr>
     </table>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
-    <script type="text/javascript">
-      (function($, _) {
-        var people = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben'];
-        var peopleLookup = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben', 'Malcolm', 'Nathan'];
-
-        var now = moment();
-
-        var weekNumber = now.get('week');
-
-        var groundskeeper = weekNumber % people.length;
-
-        var app = angular.module('rosterApp', []);
-
-        app.controller('RosterCtrl', function ($scope) {
-          $scope.columns = [
-            {
-              label: 'Groundskeeper',
-              value: peopleLookup[groundskeeper]
-            },
-            {
-              label: 'Chair',
-              value: peopleLookup[groundskeeper + 1]
-            },
-            {
-              label: 'Minutes',
-              value: peopleLookup[groundskeeper + 2]
-            },
-          ];
-        });
-      })(jQuery, _);
-    </script>
+    <script type="text/javascript" src="js/roster.js"></script>
   </body>
 </html>
