@@ -8,7 +8,7 @@ To add your team, you will need to fork, and then change the "names" within the 
 To add your team, fork the repo and then change the people array within the `roster.js`.
 
 ```
-var people = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben'];
+var people = ['Current', 'People', 'Here'];
 ```
 
 _TO:_
