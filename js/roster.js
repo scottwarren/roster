@@ -1,5 +1,5 @@
 (function() {
-  var people = ['Malcolm', 'Nathan', 'Simon', 'Dane', 'Scott', 'Zak', 'Ben'];
+  var people = ['Scott', 'Tony', 'Saajid', 'Luca'];
 
   var now = moment();
 
@@ -16,26 +16,21 @@
     return people[index];
   };
 
-  var groundskeeper = getPersonFromPeople(peopleIndex++);
-  var chair = getPersonFromPeople(peopleIndex++);
-  var minutes = getPersonFromPeople(peopleIndex++);
+  var onCall = getPersonFromPeople(peopleIndex++);
+  var onCallBackup = getPersonFromPeople(peopleIndex++);
 
   var app = angular.module('rosterApp', []);
 
   app.controller('RosterCtrl', function ($scope) {
     $scope.columns = [
       {
-        label: 'Groundskeeper',
-        value: groundskeeper
+        label: 'On call',
+        value: onCall
       },
       {
-        label: 'Chair',
-        value: chair
-      },
-      {
-        label: 'Minutes',
-        value: minutes
-      },
+        label: 'Backup on call',
+        value: onCallBackup
+      }
     ];
   });
 })();
